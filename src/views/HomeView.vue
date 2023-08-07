@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Login v-if="!loggedIn" @login="(user) => appLogin(user)"/>
+  <TodoApp :username="username" v-if="loggedIn"/>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Login from '@/components/Login.vue'
+import TodoApp from '@/components/TodoApp.vue'
 
 export default {
   name: 'HomeView',
+  props: ['loggedIn'],
+  data() {
+    return {
+      username: null
+    }
+  },
   components: {
-    HelloWorld
+    Login, TodoApp
+  },
+  methods: {
+    appLogin(user) {
+      this.username = user
+      this.$emit('login', user)
+    }
   }
 }
 </script>
