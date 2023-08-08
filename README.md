@@ -1,19 +1,50 @@
-# todo
 
-## Project setup
+# Todoer
+
+This is a Todo app built with Vue3 and local storage for practice.
+
+
+## Demo
+
+https://todoer-kz40.onrender.com
+## Features
+
+- Add task
+- Edit task
+- Delete task
+- Data persistence
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm i && npm run build
 ```
-npm install
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+Go to the project directory
+
+```bash
+  cd my-project
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+Install dependencies
+
+```bash
+  npm install
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Start the server
+
+```bash
+  npm run serve
+```
+
